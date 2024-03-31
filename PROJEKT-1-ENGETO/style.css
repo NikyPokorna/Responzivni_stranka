@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background-color-nav: #33292a;
+  --background-color-body-dark: #33292a;
+  --background-color-body-brown: #644b4f;
+  --background-color-body-dark-dark: #333333;
+  --background-color-body-white: #f2f2f2;
+  --backhround-color-odkaz: #efa69d;
+  --color-odkaz-hover: #e9877b;
+}
+
+body {
+  font-family: "Roboto", sans-serif, arial;
+}
+
+header {
+  background-color: var(--background-color-nav);
+  height: 50px;
+}
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 0;
+}
+header a {
+  color: var(--background-color-body-white);
+  text-decoration: none;
+}
+.header-icon {
+  display: none;
+  height: 35px;
+  width: 30px;
+  margin-left: auto;
+  margin-right: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+.header-icon img {
+  width: 100%;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  header a {
+    display: none;
+  }
+  .header-icon {
+    display: block;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 850px;
+  background-size: cover;
+  background-image: url("/images/scott-goodwill-y8Ngwq34_Ak-unsplash.jpg");
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.hero-content {
+  color: var(--background-color-body-white);
+  font-size: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  margin-right: 200px;
+}
+@media (max-width: 768px) {
+  .hero-content {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 992px) {
+  .hero-content {
+    margin-right: 30px;
+  }
+}
+
+.about-us {
+  background-color: var(--background-color-body-white);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 80px 200px;
+}
+
+.about-us img {
+  max-width: 500px;
+  height: 300px;
+  object-fit: cover;
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .about-us {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 70px 20px;
+  }
+  .about-us img {
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  .about-us {
+    padding: 70px 20px;
+  }
+  .about-us img {
+    max-width: 500px;
+  }
+}
+.what-we-do {
+  background-color: var(--background-color-body-dark);
+  color: var(--background-color-body-white);
+  padding: 80px 200px;
+}
+.what-we-do-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.what-we-do-text {
+  padding-bottom: 80px;
+}
+.what-we-do img {
+  width: 80px;
+  height: 80px;
+}
+.what-we-do-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .what-we-do {
+    padding: 70px 20px;
+  }
+  .what-we-do-icons {
+    flex-direction: column;
+    align-items: baseline;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 992px) {
+  .what-we-do {
+    padding: 70px 30px;
+  }
+}
+.our-trips {
+  background-color: var(--background-color-body-white);
+  padding: 80px 200px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1600px;
+  margin: auto;
+}
+.our-trips img,
+.our-trips-text {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}
+
+.our-trips-text {
+  background-color: rgb(201, 201, 201);
+  background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  height: 300px;
+}
+
+@media (max-width: 756px) {
+  .our-trips div {
+    width: calc(100% / 3-20px);
+  }
+  .our-trips-text {
+    height: 50px;
+    min-width: 300px;
+  }
+}
+
+.where-to-go {
+  background-color: var(--background-color-body-brown);
+  color: var(--background-color-body-white);
+  padding: 80px 200px;
+}
+.where-to-go-title {
+  text-align: center;
+  flex: 1;
+}
+.where-to-go-content {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.where-to-go-article1 {
+  padding-bottom: 20px;
+  flex: 2;
+  text-align: justify;
+}
+.where-to-go-article2 {
+  padding-bottom: 30px;
+}
+.where-to-go button {
+  padding: 12px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .where-to-go-content {
+    flex-direction: row;
+  }
+  .where-to-go-title {
+    text-align: right;
+  }
+}
+.reviews {
+  background-color: var(--background-color-body-white);
+  padding: 80px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.reviews-article1 {
+  text-align: center;
+  max-width: 350px;
+  padding-bottom: 50px;
+}
+.reviews-smaller-articles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 80px;
+}
+.reviews img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.reviews-article2,
+.reviews-article3 {
+  text-align: center;
+  max-width: 350px;
+}
+@media (max-width: 768px) {
+  .reviews-smaller-articles {
+    flex-direction: column;
+  }
+}
+
+.nature {
+  display: flex;
+  flex-wrap: wrap;
+}
+.nature img {
+  width: 50%;
+  height: 50vh;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .nature {
+    display: flex;
+    flex-direction: column;
+  }
+  .nature img {
+    width: 100%;
+  }
+}
+
+footer {
+  background-color: var(--background-color-body-dark-dark);
+  color: var(--background-color-body-white);
+  text-align: center;
+  font-size: 10px;
+  padding: 25px 0;
+}
+.contact {
+  text-decoration: underline;
+  color: var(--color-odkaz-hover);
+}
